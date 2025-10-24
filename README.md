@@ -15,7 +15,7 @@ The objective of this basic application is the uploading and distribution of the
 
 ###Initially backend setup
 - **Clone the repository.**
-  - code: *git clone <repo_url>/*
+  - code: *git clone <repo_url>*
 
 - **Change to Backend folder and install the required dependencies.**
   - *cd backend*
