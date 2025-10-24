@@ -13,7 +13,7 @@ The objective of this basic application is the uploading and distribution of the
 
 ##The steps to be followed to execute the application are:
 
-### initially backend setup
+###Initially backend setup
 - **Clone the repository.**
   - code: *git clone <repo_url>/*
 
