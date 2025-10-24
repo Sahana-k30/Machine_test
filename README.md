@@ -18,8 +18,8 @@ The objective of this basic application is the uploading and distribution of the
   - code: *git clone <repo_url>/*
 
 - **Change to Backend folder and install the required dependencies.**
-  - code: - *cd backend*
-          - *npm i express mongoose jsonwebtoken nodemon bcryptjs cors path multer csv-parser dotenv fs xlsx.*
+  - *cd backend*
+  - *npm i express mongoose jsonwebtoken nodemon bcryptjs cors path multer csv-parser dotenv fs xlsx.*
 
 - **Replace ur mongodb_url and required data in .env file.**
 
