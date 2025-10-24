@@ -3,9 +3,9 @@
 The objective of this basic application is the uploading and distribution of the lists in the CSV/xlsx file to the agents present in the database in the pattern of division of 5.
 
 ##**The features included are**:
---*User or admin can login*.The login is authenticated by JWT Token.
---The required *agent can be added* by the user after login.
---*Upload the CSV/xlsx file* and the list will be divided in sequential manner.
+- *User or admin can login*.The login is authenticated by JWT Token.
+-The required *agent can be added* by the user after login.
+-*Upload the CSV/xlsx file* and the list will be divided in sequential manner.
 
 ##The Tech Stack used to build this application are:
 **Frontend**: React,CSS
@@ -13,7 +13,7 @@ The objective of this basic application is the uploading and distribution of the
 
 ##The steps to be followed to execute the application are:
 
-###--initially backend setup
+### initially backend setup
 1.**Clone the repository.**
   code: *git clone <repo_url>/*
 
@@ -28,7 +28,7 @@ The objective of this basic application is the uploading and distribution of the
 5.Run the backend using **nodemon index.js command** in the terminal.
 *This should display server is running and mongodb successfully connected.*
 
-###--***Forntend setup***
+###***Forntend setup***
 1.**Move to frontend folder**
   code: *cd frontend/frontend-proj*
 
