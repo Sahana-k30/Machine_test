@@ -14,29 +14,29 @@ The objective of this basic application is the uploading and distribution of the
 ##The steps to be followed to execute the application are:
 
 ### initially backend setup
-1.**Clone the repository.**
-  code: *git clone <repo_url>/*
+- **Clone the repository.**
+  - code: *git clone <repo_url>/*
 
-2.**Change to Backend folder and install the required dependencies.**
-  code: *cd backend*
-        *npm i express mongoose jsonwebtoken nodemon bcryptjs cors path multer csv-parser dotenv fs xlsx.*
+- **Change to Backend folder and install the required dependencies.**
+  - code: - *cd backend*
+          - *npm i express mongoose jsonwebtoken nodemon bcryptjs cors path multer csv-parser dotenv fs xlsx.*
 
-3.**Replace ur mongodb_url and required data in .env file.**
+- **Replace ur mongodb_url and required data in .env file.**
 
-4.**Run the seed.js file using node seed.js once.It is recommended to save the data in the database.**
+- **Run the seed.js file using node seed.js once.It is recommended to save the data in the database.**
 
-5.Run the backend using **nodemon index.js command** in the terminal.
-*This should display server is running and mongodb successfully connected.*
+- Run the backend using **nodemon index.js command** in the terminal.
+- *This should display server is running and mongodb successfully connected.*
 
 ###***Forntend setup***
-1.**Move to frontend folder**
-  code: *cd frontend/frontend-proj*
+- **Move to frontend folder**
+  - code: *cd frontend/frontend-proj*
 
-2.**Install the dependencies.**
-  code: *npm install*
+- **Install the dependencies.**
+  - code: *npm install*
 
-3.**Run the frontend.**
-  code: *npm run dev*
+- **Run the frontend.**
+  - code: *npm run dev*
 
 go the the link in the terminal and login using seeded information.
 
