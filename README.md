@@ -4,12 +4,12 @@ The objective of this basic application is the uploading and distribution of the
 
 ##**The features included are**:
 - *User or admin can login*.The login is authenticated by JWT Token.
--The required *agent can be added* by the user after login.
--*Upload the CSV/xlsx file* and the list will be divided in sequential manner.
+- The required *agent can be added* by the user after login.
+- *Upload the CSV/xlsx file* and the list will be divided in sequential manner.
 
 ##The Tech Stack used to build this application are:
-**Frontend**: React,CSS
-**Backend**: Node.js,Express.js, MongoDB Compass.
+- **Frontend**: React,CSS
+- **Backend**: Node.js,Express.js, MongoDB Compass.
 
 ##The steps to be followed to execute the application are:
 
