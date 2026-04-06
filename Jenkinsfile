@@ -3,21 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Clone Repo') {
+        stage('Build Images') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
-            }
-        }
-
-        stage('Build Backend Image') {
-            steps {
-                sh 'docker build -t devtrack-backend ./backend'
-            }
-        }
-
-        stage('Build Frontend Image') {
-            steps {
-                sh 'docker build -t devtrack-frontend ./frontend'
+                sh 'docker-compose build'
             }
         }
 
@@ -27,7 +15,7 @@ pipeline {
             }
         }
 
-        stage('Verify Running Containers') {
+        stage('Check Containers') {
             steps {
                 sh 'docker ps'
             }
