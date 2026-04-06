@@ -3,15 +3,27 @@ pipeline {
 
     stages {
 
-        stage('Build Images') {
+        stage('Build Backend Image') {
             steps {
-                sh 'docker-compose build'
+                sh 'docker build -t machinetest-backend ./backend'
             }
         }
 
-        stage('Run Containers') {
+        stage('Build Frontend Image') {
             steps {
-                sh 'docker-compose up -d'
+                sh 'docker build -t machinetest-frontend ./frontend/frontend-proj'
+            }
+        }
+
+        stage('Run Backend Container') {
+            steps {
+                sh 'docker run -d -p 5000:5000 machinetest-backend'
+            }
+        }
+
+        stage('Run Frontend Container') {
+            steps {
+                sh 'docker run -d -p 3000:3000 machinetest-frontend'
             }
         }
 
