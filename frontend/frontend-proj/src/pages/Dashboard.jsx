@@ -6,11 +6,26 @@ import '../styles/Dashboard.css';
 export default function Dashboard() {
   const nav = useNavigate();
   const [dists, setDists] = useState([]);
+  const [agents, setAgents] = useState([]);
   const [err, setErr] = useState('');
 
   useEffect(() => {
-    fetchDistributions();
-  }, []);
+  fetchDistributions();
+  fetchAgents();   // 🔥 ADD THIS
+}, []);
+
+
+  async function fetchAgents() {
+  try {
+    const res = await fetch(`${API_BASE}/agents`, {
+      headers: { Authorization: `Bearer ${getToken()}` },
+    });
+    const data = await res.json();
+    if (res.ok) setAgents(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
 
   async function fetchDistributions() {
     setErr('');
@@ -50,6 +65,32 @@ export default function Dashboard() {
       </header>
 
       <main className="dashboard-main">
+
+        <h3 className="section-title">Agents</h3>
+        {err && <div className="error-message">{err}</div>}
+        {agents.length === 0 ? (
+          <div className="no-data">No agents added yet.</div>
+        ) : (
+          <div className="distributions-grid">
+            {agents.map((agent) => (
+              <div key={agent._id} className="distribution-card">
+                <div className="card-header">
+                  <div className="agent-info">
+                    <p><strong>Agent:</strong> {agent.name} ({agent.email})</p>
+                    <p><strong>Mobile:</strong> {agent.mobile}</p>
+                  </div>
+                  <div className="file-info">
+                    <p><strong>Status:</strong> Active Agent</p>
+                  </div>
+                </div>
+
+                
+                </div>
+            ))}
+          </div>
+        )}
+
+
         <h3 className="section-title">Distributions</h3>
         {err && <div className="error-message">{err}</div>}
         {dists.length === 0 ? (
