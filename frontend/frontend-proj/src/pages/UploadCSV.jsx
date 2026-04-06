@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { API_BASE, getToken } from '../utils/auth';
 import { useNavigate } from 'react-router-dom';
-import '../styles/UploadCSV.css';
+import "../styles/UploadCSV.css";
 
 export default function UploadCSV() {
   const [file, setFile] = useState(null);
